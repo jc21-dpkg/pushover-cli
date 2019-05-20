@@ -1,0 +1,16 @@
+Source: pushover-cli
+Section: util
+Priority: optional
+Maintainer: Jamie Curnow <jc@jc21.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 4.3.0.1
+Homepage: https://github.com/jc21/pushover-cli
+Vcs-Git: https://github.com/jc21/pushover-cli.git
+Vcs-Browser: https://github.com/jc21/pushover-cli
+
+Package: pushover-cli
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Yes, it's another super simple command line interface for Pushover.
