@@ -19,8 +19,8 @@
 
 
 # Go parameters
-VERSION=$(shell cat package.json | jq -r .version)
-GITCOMMIT=$(shell git rev-list -1 HEAD)
+VERSION=$(shell cat ../dpkg.json | jq -r ".VERSION")
+COMMIT=$(shell cat ../dpkg.json | jq -r ".COMMIT")
 GOCMD=go
 GOBUILD=$(GOCMD) build
 GOCLEAN=$(GOCMD) clean
@@ -30,7 +30,7 @@ BINARY_NAME=pushover-cli
 all: build
 
 build:
-	GO111MODULE=on $(GOBUILD) -o bin/$(BINARY_NAME) -v -ldflags "-X main.GitCommit=$(GITCOMMIT) -X main.AppVersion=$(VERSION)"
+	GO111MODULE=on $(GOBUILD) -o bin/$(BINARY_NAME) -v -ldflags "-X main.GitCommit=$(COMMIT) -X main.AppVersion=$(VERSION)"
 
 clean:
 	$(GOCLEAN)
