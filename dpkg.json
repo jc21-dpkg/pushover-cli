@@ -4,5 +4,8 @@
 	"COMMIT": "4bfab24bb56f32da942b467c55da817269ff5cbb",
 	"GH_USER": "jc21",
 	"URL": "https://github.com/${GH_USER}/${PACKAGE}/archive/${VERSION}.tar.gz",
-	"SIGN_KEY": "EFD591B218E19AE3376D80D14F9E050D1DFFBB86"
+	"SIGN_KEY": "EFD591B218E19AE3376D80D14F9E050D1DFFBB86",
+	"publish": {
+		"GH_USER": "jc21-dpkg"
+	}
 }
